@@ -1,0 +1,174 @@
+.omni {
+    background-color: #010005;
+    color: #F9F9FC;
+
+    line-height: 1.5;
+    
+}
+
+.solo-title {
+    color:#04d8ac;
+    text-align: left;
+
+}
+
+.projects {
+    background-color: #ddedff;
+    padding: 100px;
+}
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 2em 0;
+}
+
+.header {
+    text-align: center;
+    padding: 1em 0;
+    border-bottom: 2px solid #6BCBDE;
+
+    display: flex;
+        align-items: center;
+        /* This vertically aligns the items in the center */
+        justify-content: center;
+        /* This centers the items horizontally */
+        gap: 20px;
+        /* This gives some space between the text and the image */
+}
+
+
+#uwaterlooimg {
+    /* min-width: 80px; */
+    /* max-width: 100px; */
+    width: 80px;
+    /* Adjust as needed */
+    height: auto;
+}
+
+.header h1 {
+    font-size: 2em;
+    margin-bottom: 0.5em;
+    margin-left: 75px;
+}
+
+.about,
+.projects {
+    margin-bottom: 2em;
+    text-align: center;
+}
+
+.about h2,
+.projects h2 {
+    font-size: 2em;
+    margin-bottom: 1em;
+}
+
+.about p {
+    font-size: 1.2em;
+    line-height: 3.2;
+}
+
+.main {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+    /* This will ensure only 2 cards per line by increasing the minimum width */
+    grid-gap: 2em;
+    margin-top: 2em;
+}
+
+.card {
+
+    background-color: #002230;
+
+    padding: 2em;
+    border-radius: 10px;
+    border: 2px solid black;
+
+    box-shadow: 6px 5px 2px black;
+
+    min-height: 400px;
+
+    margin: auto;
+    margin-bottom: 30px;
+    position: relative;
+}
+
+
+.card p {
+    color: #ffffff;
+    text-align: left;
+    /* Left-align the title and description */
+}
+
+.card p {
+    font-size: 1.3em;
+    margin-bottom: 2em;
+    line-height: 1.6em;
+    /* Added bottom margin */
+}
+
+.card .tech-icons {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    display: flex;
+    gap: 10px;
+}
+
+.card img {
+    width: 45px;
+    height: 45px;
+    transition: all 0.3s ease-in-out;
+}
+
+.card img:hover {
+    transform: scale(1.2);
+}
+.highlight {
+    color: #6BCBDE;
+}
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+}
+
+.tooltip .tooltiptext {
+
+    visibility: hidden;
+    min-width: 120px;
+    max-width: 200px;
+    background-color: #010005;
+    color: #F9F9FC;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+
+    position: absolute;
+    z-index: 1;
+    bottom: 100%;
+    left: 50%;
+    margin-left: -60px;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+}
+
+
+.projects-title {
+    background-color: #ddedff;
+    color: #04d8ac;
+    font-size: 3.5em;
+    font-weight: 400;
+
+    padding-left: -300px;
+
+
+}

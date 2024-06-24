@@ -1,0 +1,106 @@
+.project-title a {
+    /* color: #7798CA; */
+    /* Change the color when hover */
+    text-decoration: underline;
+    font-size: 1.5rem;
+    /* Add an underline when hover */
+    cursor: pointer;
+    /* Change the cursor to a pointer when hover */
+}
+
+.project-title a:hover {
+    color: #02a48c;
+    /* Change the color when hover */
+    text-decoration: underline;
+    /* Add an underline when hover */
+    cursor: pointer;
+    /* Change the cursor to a pointer when hover */
+}
+
+.main {
+    text-rendering: optimizeLegibility;
+    --rem: 16;
+    --fa-font-solid: normal 900 1em/1 "Font Awesome 6 Solid";
+    --fa-font-regular: normal 400 1em/1 "Font Awesome 6 Regular";
+    --fa-font-light: normal 300 1em/1 "Font Awesome 6 Light";
+    --fa-font-thin: normal 100 1em/1 "Font Awesome 6 Thin";
+    --fa-font-duotone: normal 900 1em/1 "Font Awesome 6 Duotone";
+    --fa-font-sharp-solid: normal 900 1em/1 "Font Awesome 6 Sharp";
+    --fa-font-sharp-regular: normal 400 1em/1 "Font Awesome 6 Sharp";
+    --fa-font-sharp-light: normal 300 1em/1 "Font Awesome 6 Sharp";
+    --fa-font-sharp-thin: normal 100 1em/1 "Font Awesome 6 Sharp";
+    --fa-font-brands: normal 400 1em/1 "Font Awesome 6 Brands";
+    -webkit-font-smoothing: antialiased;
+    font-weight: 400;
+    color: #4a4a4a;
+    line-height: 1.5;
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen,Ubuntu,Cantarell,"Fira Sans","Droid Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 1rem;
+    box-sizing: inherit;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+    grid-gap: 2em;
+    margin-top: 2em;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.card {
+
+    background-color: #002230;
+
+    padding: 2em;
+    border-radius: 10px;
+    border: 2px solid black;
+
+    box-shadow: 6px 5px 2px black;
+
+    min-height: 400px;
+
+    margin: auto;
+    margin-bottom: 30px;
+    position: relative;
+}
+
+.graph {
+    position: absolute; /* Position the graph absolutely within the card */
+    right: 0; /* Align to the right */
+    bottom: 0; /* Align to the bottom */
+    width: 150px; /* Set a fixed width */
+    height: 150px; /* Set a fixed height */
+  }
+  
+  /* This ensures the canvas within the graph div is the same size as the graph div itself */
+  .graph canvas {
+    width: 100% !important;
+    height: 100% !important;
+  }
+
+  .entire-thing {
+    background-color: #ddedff;
+    padding-top: 50px;
+    padding-bottom: 42px;
+}
+
+.repositories-title {
+    background-color: #ddedff;
+    color: #04d8ac;
+    font-size: 3.5em;
+    font-weight: 500;
+
+    padding-left: -300px;
+    text-align: center;
+
+
+}
+
+.mini-title {
+    background-color: #ddedff;
+    color: #04d8ac;
+    font-size: 3em;
+    font-weight: 400;
+
+    /* padding-left: 5%; */
+
+
+}

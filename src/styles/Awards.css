@@ -1,0 +1,103 @@
+.section {
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    --rem: 16;
+    font-weight: 400;
+    line-height: 1.5;
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen,Ubuntu,Cantarell,"Fira Sans","Droid Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 1em;
+    color: black;
+    box-sizing: inherit;
+    display: block;
+    padding: 3rem 1.5rem;
+    padding-top: 100px;
+    padding-bottom: 3rem;
+    min-height: 100vh;
+    background-color: inherit;
+    overflow-y: hidden;
+    position: relative;
+    transition: all 0.5s ease-in-out;
+}
+
+.tile-is-ancestor-award {
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    --rem: 16;
+    font-weight: 400;
+    line-height: 1.5;
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen,Ubuntu,Cantarell,"Fira Sans","Droid Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 1em;
+    color: black;
+    box-sizing: inherit;
+    align-items: stretch;
+    flex-basis: 0;
+    flex-grow: 1;
+    flex-shrink: 1;
+    min-height: min-content;
+    margin-left: -.75rem;
+    margin-right: -.75rem;
+    margin-top: -.75rem;
+    display: flex;
+    margin-bottom: .75rem;
+}
+
+
+.tile-is-child-award {
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    --rem: 16;
+    font-weight: 400;
+    line-height: 1.5;
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen,Ubuntu,Cantarell,"Fira Sans","Droid Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 1em;
+    color: black;
+    box-sizing: inherit;
+    align-items: stretch;
+    display: block;
+    flex-basis: 0;
+    flex-grow: 1;
+    flex-shrink: 1;
+    min-height: min-content;
+    margin: 0!important;
+}
+
+.title.is-2.section-title-award {
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    --rem: 16;
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen,Ubuntu,Cantarell,"Fira Sans","Droid Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+    word-break: break-word;
+    line-height: 1.125;
+    color: #04d8ac;
+    font-weight: 400;
+    font-size: 2.5rem;
+    text-align: center;
+}
+
+
+
+.tile.is-parent.work-elem-award{
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    --rem: 16;
+    font-weight: 400;
+    line-height: 1.5;
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen,Ubuntu,Cantarell,"Fira Sans","Droid Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 1em;
+    color: black;
+    box-sizing: inherit;
+    align-items: stretch;
+    flex-basis: 0;
+    flex-grow: 1;
+    flex-shrink: 1;
+    min-height: min-content;
+
+    margin: auto;
+
+    padding: .75rem;
+    display: flex;
+}
+
