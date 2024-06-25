@@ -35,7 +35,8 @@ const Projects = () => {
         { src: reactimg, name: "React" },
         { src: nodeimg, name: "Node.js" },
       ],
-      live: false,
+      live: true,
+      link: "https://github.com/0xAndoroid/zkSnake"
     },
         {
           title: "LibInHTML",
@@ -137,7 +138,7 @@ const Projects = () => {
         <div className="projects" id="projects">
     <h1 className="projects-title" >Projects</h1>
 
-          <div className="main">
+          <div className="main-projects">
             {portfolioData.map((project, index) => (
               <div className="card" key={index}>
                 <h2 className="solo-title">

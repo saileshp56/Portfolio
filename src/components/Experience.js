@@ -3,6 +3,8 @@ import canada_img from "../images/canada.png";
 import carleton_img from "../images/carleton.png";
 import sov_prime_img from "../images/sov_prime.jpeg";
 import uw_img from "../images/uwlogo123.png";
+import amazon_img from "../images/amazon.png";
+
 
 import "../styles/Experience.css"
 import { Helmet } from "react-helmet";
@@ -31,13 +33,37 @@ const Experience = () => {
         <div class="tile is-parent work-elem">
             <div class="tile is-child is-3">
               <figure class="image is-128x128 work-logo">
+                <img src={amazon_img}/>
+              </figure>
+            </div>
+            <div class="tile is-child">
+              <p class="title is-4"><a href="https://aws.amazon.com/" target="_blank">Amazon</a></p>
+              <p class="subtitle is-5">
+                Software Development Engineer Intern<br/>
+                <span class="subtitle is-6">JUNE 2024 -  SEPTEMBER 2024</span><br/>
+                <span class="subtitle is-6">Vancouver, BC</span><br/>
+                <span class="subtitle is-6">OOP, Kotlin, TypeScript</span>
+              </p>
+              <p class="work-content">
+                <ul>
+                  <li>
+                  • Creating internal tooling for AWS teams using OOP principles with Typescript and Kotlin
+                  </li>
+                </ul>
+              </p>
+            </div>
+          </div>
+
+        <div class="tile is-parent work-elem">
+            <div class="tile is-child is-3">
+              <figure class="image is-128x128 work-logo">
                 <img src={uw_img}/>
               </figure>
             </div>
             <div class="tile is-child">
-              <p class="title is-4"><a href="https://www.canada.ca/en/public-services-procurement.html" target="_blank">University of Waterloo</a></p>
+              <p class="title is-4"><a href="https://uwaterloo.ca/" target="_blank">University of Waterloo</a></p>
               <p class="subtitle is-5">
-                Undergraduate Research Assistant -- Machine Learning<br/>
+                Undergraduate Research Assistant &mdash; Machine Learning<br/>
                 <span class="subtitle is-6">JANUARY 2024 -  APRIL 2024</span><br/>
                 <span class="subtitle is-6">Waterloo, ON</span><br/>
                 <span class="subtitle is-6">C++, CUDA, Python, Pandas</span>
@@ -93,7 +119,7 @@ const Experience = () => {
               </figure>
             </div>
             <div class="tile is-child">
-              <p class="title is-4"><a href="https://aws.amazon.com/" target="_blank">Carleton University</a></p>
+              <p class="title is-4"><a href="https://carleton.ca/" target="_blank">Carleton University</a></p>
               <p class="subtitle is-5">
               Undergraduate Computer Science Teaching Assistant<br/>
                 <span class="subtitle is-6">SEPTEMBER 2022 - APRIL 2023</span><br/>
@@ -120,7 +146,7 @@ const Experience = () => {
               </figure>
             </div>
             <div class="tile is-child">
-              <p class="title is-4"><a href="https://www.microsoft.com/en-us/quantum" target="_blank">Sovereign Prime</a></p>
+              <p class="title is-4"><a href="" target="_blank">Sovereign Prime</a></p>
               <p class="subtitle is-5">
                 Front-End Development Intern<br/>
                 <span class="subtitle is-6">MAY 2022 - SEPTEMBER 2022</span><br/>

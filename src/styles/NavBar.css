@@ -25,4 +25,8 @@
 
 }
 
-
+@media (max-width: 768px) {
+    .nav-bar.container.void-background.has-shadow.is-fluid {
+        display: none;
+    }
+}

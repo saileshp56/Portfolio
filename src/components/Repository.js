@@ -16,7 +16,7 @@ const Repository = () => {
   const [repoArr, setRepoArr] = useState([]);
   const [projects, setProjects] = useState([]);
 
-  const API_key = "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";
+  const API_key = "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";
   /*
     This is a read only api key, but instead of using mine and diminishing my rate limit, please make your own for free (which is what I did)
 

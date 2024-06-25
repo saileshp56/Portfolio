@@ -7,7 +7,7 @@ import Resume from './components/Resume'
 import Experience from './components/Experience';
 import Projects from './components/Projects';
 import Repository from './components/Repository';
-import ReadMe from './components/ReadMe';
+
 
 
 
@@ -17,11 +17,10 @@ function App() {
   return (
     <div >
       <NavBar />
-      {/* <ReadMe /> */}
       <About />
       <Projects />
       <Experience />
-      <Repository />
+      {/* <Repository /> */}
       <Resume />
       <Awards />
     </div>

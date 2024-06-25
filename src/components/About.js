@@ -14,7 +14,7 @@ import { Helmet } from "react-helmet";
 
 const About = () => {
   return (
-    <section class="section" id="about">
+    <section>
       <Helmet>
         <html lang="en" />
 
@@ -24,7 +24,7 @@ const About = () => {
         />
       </Helmet>
         <div class="container">
-            <div class="columns is-centered is-vcentered">
+            <div class="columns is-centered">
                 <div class="column">
                 <img class="avatar" src={selfie}/>
                 <div class="about-title has-text-centered">
@@ -39,115 +39,119 @@ const About = () => {
             </div>
             </div>
                 </div>
-                <div class="column">
+                <div class="column-right">
                 <p>
-                  <br /><br />
-                I'm a 20 y/o <span class="highlight">Software Engineer</span> and aspiring <span class="highlight">Algorithmic Trader</span>. I love working on hackathons and side projects in my spare time; I just can't sit still!  My passion for
-                computer science has settled in the{" "}
+
+                I'm a 21 y/o <span style={{ color: "#339fde" }}>Software Engineer</span> and Computer Science student @ the{" "}
                 
                 <span style={{ color: "#EAAB00" }} className="tooltip">
-              <abbr title="">University of Waterloo </abbr>
-              <span className="tooltiptext">Honours Bachelor of Computer Science 2025</span>
+              <abbr title="">University of Waterloo</abbr>.
+              <span className="tooltiptext" style={{zIndex: "10000"}}>Honours Bachelor of Computer Science 2026</span>
             </span>{" "}
-                
-                
-                
-                
-                for now.
-                
-                
-                
+
                 <br/><br/>
               </p>
               
               <p>
-            I am proficient in {" "}
-            <span style={{ color: "#339fde" }}>React.js</span>,{" "}
-            <span style={{ color: "#339fde" }}>Node.js</span> as well as{" "}
-            <span style={{ color: "#D17B5B" }}>Database Technologies</span> such
-            as <span style={{ color: "#68b848" }}>MongoDB</span> and{" "}
-            <span style={{ color: "#68b848" }}>Mongoose</span>
-            ,Firebase and SQL,{" "}
-            <span style={{ color: "#D17B5B" }}>Backend Technologies</span> such
-            as <span style={{ color: "#339fde" }}>Express.js</span>, and{" "}
-            <span style={{ color: "#D17B5B" }}>DevOps</span> tools such as{" "}
-            <span style={{ color: "#B892C0" }}>Docker</span> and{" "}
-            <span style={{ color: "#B892C0" }}>Kubernetes</span>. <br />I am also an <span style={{ color: "#DBAA5E" }}>
-              AWS Certified Cloud Practitioner
-            </span> and an exceptional <span style={{ color: "#449346" }}>Python</span> and <span style={{ color: "#EB4A3F" }}>Java</span> programmer.<br />
-            <br />
-            
+              I'm a skilled {" "}
+              <span style={{ color: "#339fde" }} className="tooltip">
+              <abbr title="">Full-Stack developer</abbr>
+              <span className="tooltiptext">React.js, Express.js, Node.js</span>
+            </span> {" "}
+              (my usual role during hackathons + I've made multiple projects),
+              an (at least) 
+              {" "}
+              <span style={{ color: "#339fde" }} className="tooltip">
+              <abbr title="">FAANG level software engineer</abbr>
+              <span className="tooltiptext">Java, Kotlin, C++, Python, (Java/Type)Script</span>
+            </span>,{" "}
+              <span style={{ color: "#339fde" }} className="tooltip">
+              <abbr title="">Database designer</abbr>
+              <span className="tooltiptext">Mongoose, MongoDB, SQL, NoSQL</span>
+            </span>, 
+              
+              and an AWS certified cloud practitioner (this just means I'm good at deploying applications to AWS).
+              <br/><br/>
 
-            
+
             
           </p>
 
-
-              <p id="interests">
-                Current Projects: Algorithmic Trading with Python, Blockchain Development, Hackathons<br/><br/>
-
-                Blockchain Work: UWaterloo Blockchain Club Executive and Researcher, ETHDenver 2024 ZKSnake &#8212; 2x Bounty Winner, The Graph Foundation &#8212; USDT Subgraph, Web3.js &#8212; NFT Master Plugin<br/><br/>
-
-                Current Research Interests: Trading Strategies, DeFi Intents<br/><br/>
-                
-              </p>
-
-              <p id="contact">
-              Reach out to me if you'd like to work together!<br/>
-              </p>
-              <ul class="contact-me-ulist">
+          <h3 class="special">What I'm working on 👨‍💻</h3>
+          <ul id="interests">
             <li>
-                <FontAwesomeIcon icon={faTelegram} />
-                <a href="https://t.me/unhingexd" target="_blank">&nbsp;&nbsp;Telegram</a>
-              </li>
+              <input type="checkbox" disabled></input>
+              &nbsp;&nbsp;&nbsp;&nbsp;I'm a Software Development Engineer Intern at Amazon this summer!
+
+            </li>
+            <li>
+            <input type="checkbox" disabled></input>
+            &nbsp;&nbsp;&nbsp;&nbsp;Blockchain Development Tools
               
-              <li>
-                <FontAwesomeIcon icon={faEnvelope} />
-                <a href="mailto:saileshp.dev@gmail.com">&nbsp;&nbsp;Email</a>
-              </li>
-              <li>
-                <FontAwesomeIcon icon={faLinkedin} />
-                <a
-                  href="https://linkedin.com/in/saileshpola"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  &nbsp;&nbsp;LinkedIn
-                </a>
-              </li>
-              <li>
-                <FontAwesomeIcon icon={faXTwitter} />
-                <a
-                  href="https://twitter.com/Unhingexd"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  &nbsp;&nbsp;Twitter
-                </a>
-              </li>
-            </ul>
-            <p>Check out my work!</p>
-            <ul class="contact-me-ulist">
-              <li>
-                <FontAwesomeIcon icon={faGithub} />
-                <a
-                  href="https://github.com/saileshp56"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  &nbsp;&nbsp;GitHub
-                </a>
-              </li>
-              <li>
-                <FontAwesomeIcon icon={faDocker} />
-                <a
-                  href="https://hub.docker.com/u/saileshp56"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  &nbsp;&nbsp;Docker
-                </a>
-              </li>
+            </li>
+            <li>
+            <input type="checkbox" disabled></input>
+            &nbsp;&nbsp;&nbsp;&nbsp;Hackathons
+            </li>
+          </ul>
+                <br />
+                <h3 class="special">My Blockchain Work 🦄	</h3>
+                <ul id="interests">
+            <li>
+              <input type="checkbox" disabled></input>
+              &nbsp;&nbsp;&nbsp;&nbsp;UWaterloo Blockchain Club Executive and Researcher
+
+            </li>
+            <li>
+            <input type="checkbox" disabled></input>
+            &nbsp;&nbsp;&nbsp;&nbsp;ETHDenver 2024 ZKSnake &#8212; First Place MetaMask & Risc0
+              
+            </li>
+            <li>
+            <input type="checkbox" disabled></input>
+            &nbsp;&nbsp;&nbsp;&nbsp;ChainSafe Web3.js NFT Plugin &#8212; Second Place
+            </li>
+            <li>
+            <input type="checkbox" disabled></input>
+            &nbsp;&nbsp;&nbsp;&nbsp;The Graph Foundation USDT Account Relations Subgraph &#8212; First Place
+            </li>
+          </ul>
+          <br />
+          <h3 class="special">Contact Me 📫	</h3>
+          <ul id="interests-links">
+            <li>
+              <input type="checkbox" disabled></input>
+              &nbsp;&nbsp;<a href="https://t.me/unhingexd" target="_blank">&nbsp;&nbsp;Telegram</a>
+
+            </li>
+            <li>
+            <input type="checkbox" disabled></input>
+            &nbsp;&nbsp;<a href="mailto:saileshp.dev@gmail.com">&nbsp;&nbsp;Email</a>
+              
+            </li>
+            <li>
+            <input type="checkbox" disabled></input>
+            &nbsp;&nbsp;<a href="https://linkedin.com/in/saileshpola" target="_blank" rel="noopener noreferrer">&nbsp;&nbsp;LinkedIn</a>
+            </li>
+            <li>
+            <input type="checkbox" disabled></input>
+            &nbsp;&nbsp;<a href="https://twitter.com/Unhingexd" target="_blank" rel="noopener noreferrer">&nbsp;&nbsp;𝕏 Twitter</a>
+            </li>
+          </ul>
+                <br />
+            
+          <h3 class="special">Check Out my Work 💹</h3>
+
+            <ul id="interests-links">
+            <li>
+              <input type="checkbox" disabled></input>
+              &nbsp;&nbsp;<a href="https://github.com/saileshp56" target="_blank">&nbsp;&nbsp;GitHub</a>
+
+            </li>
+            <li>
+              <input type="checkbox" disabled></input>
+              &nbsp;&nbsp;<a href="https://hub.docker.com/u/saileshp56" target="_blank">&nbsp;&nbsp;Docker Hub</a>
+            </li>
             </ul>
 
                 </div>

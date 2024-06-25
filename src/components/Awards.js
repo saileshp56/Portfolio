@@ -27,12 +27,12 @@ const Awards = () => {
               <tbody>
               <tr>
                   <td>ETHDenver 2024 Metamask and RISC0 Bounty &#8212; First Place Winner</td>
-                  <td>💰💰💰</td>
+                  <td>$8000 USD</td>
                   <td>03/2024</td>
                 </tr>
                 <tr>
                   <td>ChainSafe Web3.js Plugin Bounty &#8212; Second Place</td>
-                  <td>&nbsp;&nbsp;&nbsp;&nbsp;💰</td>
+                  <td>$1500 USD</td>
                   <td>02/2024</td>
                 </tr>
               <tr>
@@ -42,7 +42,7 @@ const Awards = () => {
                 </tr>
                 <tr>
                   <td>The Graph Foundation Subgraph Development Hackathon - First Place</td>
-                  <td>&nbsp;&nbsp;&nbsp;&nbsp;💰</td>
+                  <td>$1000 USD</td>
                   <td>10/2023</td>
                 </tr>
                 <tr>
