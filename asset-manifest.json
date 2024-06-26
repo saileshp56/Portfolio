@@ -1,29 +1,29 @@
 {
   "files": {
-    "main.css": "/portfolio-attempt-2/static/css/main.561eb5a3.css",
-    "main.js": "/portfolio-attempt-2/static/js/main.a681fbb4.js",
-    "static/js/787.993dfbae.chunk.js": "/portfolio-attempt-2/static/js/787.993dfbae.chunk.js",
-    "static/media/canada.png": "/portfolio-attempt-2/static/media/canada.8b60edcc1ca8900f7602.png",
-    "static/media/pfp.png": "/portfolio-attempt-2/static/media/pfp.19e5acd6e3cb34a90c89.png",
-    "static/media/react.png": "/portfolio-attempt-2/static/media/react.e24f68c7e3e273021253.png",
-    "static/media/uwlogo123.png": "/portfolio-attempt-2/static/media/uwlogo123.4f899ab4e8198a3ba480.png",
-    "static/media/amazon.png": "/portfolio-attempt-2/static/media/amazon.1b5b780a2155c1ab6c26.png",
-    "static/media/the-graph-foundation.png": "/portfolio-attempt-2/static/media/the-graph-foundation.4f775ff7aef25cee3377.png",
-    "static/media/-s.p.woff2": "/portfolio-attempt-2/static/media/8e0850cb837930de-s.p.e73f9ca9ea5144cbd076.woff2",
-    "static/media/typescript.png": "/portfolio-attempt-2/static/media/typescript.52ea0bc40ba11d507e7d.png",
-    "static/media/ascript.png": "/portfolio-attempt-2/static/media/ascript.c29ae4099e9434047934.png",
-    "static/media/mongodb.png": "/portfolio-attempt-2/static/media/mongodb.7a16fc61d457c9e340e2.png",
-    "static/media/rustlang.png": "/portfolio-attempt-2/static/media/rustlang.fe97a67e56a84ad02263.png",
-    "static/media/express.png": "/portfolio-attempt-2/static/media/express.358c080c10a8bba87067.png",
-    "static/media/aws.png": "/portfolio-attempt-2/static/media/aws.155b618089c644f1b9ef.png",
-    "static/media/logo.svg": "/portfolio-attempt-2/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
-    "index.html": "/portfolio-attempt-2/index.html",
-    "main.561eb5a3.css.map": "/portfolio-attempt-2/static/css/main.561eb5a3.css.map",
-    "main.a681fbb4.js.map": "/portfolio-attempt-2/static/js/main.a681fbb4.js.map",
-    "787.993dfbae.chunk.js.map": "/portfolio-attempt-2/static/js/787.993dfbae.chunk.js.map"
+    "main.css": "/portfolio/static/css/main.b241f291.css",
+    "main.js": "/portfolio/static/js/main.420a3dfb.js",
+    "static/js/787.993dfbae.chunk.js": "/portfolio/static/js/787.993dfbae.chunk.js",
+    "static/media/canada.png": "/portfolio/static/media/canada.8b60edcc1ca8900f7602.png",
+    "static/media/pfp.png": "/portfolio/static/media/pfp.19e5acd6e3cb34a90c89.png",
+    "static/media/react.png": "/portfolio/static/media/react.e24f68c7e3e273021253.png",
+    "static/media/uwlogo123.png": "/portfolio/static/media/uwlogo123.4f899ab4e8198a3ba480.png",
+    "static/media/amazon.png": "/portfolio/static/media/amazon.1b5b780a2155c1ab6c26.png",
+    "static/media/the-graph-foundation.png": "/portfolio/static/media/the-graph-foundation.4f775ff7aef25cee3377.png",
+    "static/media/-s.p.woff2": "/portfolio/static/media/8e0850cb837930de-s.p.e73f9ca9ea5144cbd076.woff2",
+    "static/media/typescript.png": "/portfolio/static/media/typescript.52ea0bc40ba11d507e7d.png",
+    "static/media/ascript.png": "/portfolio/static/media/ascript.c29ae4099e9434047934.png",
+    "static/media/mongodb.png": "/portfolio/static/media/mongodb.7a16fc61d457c9e340e2.png",
+    "static/media/rustlang.png": "/portfolio/static/media/rustlang.fe97a67e56a84ad02263.png",
+    "static/media/express.png": "/portfolio/static/media/express.358c080c10a8bba87067.png",
+    "static/media/aws.png": "/portfolio/static/media/aws.155b618089c644f1b9ef.png",
+    "static/media/logo.svg": "/portfolio/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "index.html": "/portfolio/index.html",
+    "main.b241f291.css.map": "/portfolio/static/css/main.b241f291.css.map",
+    "main.420a3dfb.js.map": "/portfolio/static/js/main.420a3dfb.js.map",
+    "787.993dfbae.chunk.js.map": "/portfolio/static/js/787.993dfbae.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.561eb5a3.css",
-    "static/js/main.a681fbb4.js"
+    "static/css/main.b241f291.css",
+    "static/js/main.420a3dfb.js"
   ]
 }
