@@ -10,7 +10,7 @@
     box-sizing: inherit;
     display: block;
     padding: 3rem 1.5rem;
-    padding-top: 100px;
+    padding-top: 40px;
     padding-bottom: 3rem;
     min-height: 100vh;
     background-color: inherit;
@@ -65,7 +65,7 @@
     -webkit-font-smoothing: antialiased;
     text-rendering: optimizeLegibility;
     --rem: 16;
-    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen,Ubuntu,Cantarell,"Fira Sans","Droid Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+
     box-sizing: inherit;
     margin: 0;
     padding: 0;
@@ -258,3 +258,22 @@
     padding: 0;
     text-align: justify;
 }
+
+@media (max-width: 650px) {
+    .tile.is-parent.work-elem {
+        flex-direction: column;
+        align-items: center;
+    }
+    .tile.is-child.is-3 {
+        width: 100%;
+        order: -1; /* This moves the image div above the text div */
+    }
+    .image.is-128x128.work-logo {
+        visibility: visible;
+        margin: 10px auto;
+        /* width: 50%; */
+        height: auto;
+    }
+
+}
+

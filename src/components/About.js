@@ -14,7 +14,7 @@ import { Helmet } from "react-helmet";
 
 const About = () => {
   return (
-    <section>
+    <section id="about">
       <Helmet>
         <html lang="en" />
 
@@ -23,7 +23,7 @@ const About = () => {
           content="Programmer, Developer, Full-Stack Developer, Full Stack Developer, Full-Stack, Full Stack, Software Engineer, Blockchain Developer, Web3 Developer, Contact Me, Contact the developer, Contact programmer, Contact Full-Stack developer, email, github, linkedin, twitter, Computer Science, Programming Portfolio"
         />
       </Helmet>
-        <div class="container">
+        <div class="container" >
             <div class="columns is-centered">
                 <div class="column">
                 <img class="avatar" src={selfie}/>

@@ -19,7 +19,7 @@ const Resume = () => {
           <h1 class="title is-2 section-title resume">Resume</h1>
           <iframe
         title="Resume"
-        src="https://yellow-ilka-16.tiiny.site/"
+        src="https://chocolate-fanni-72.tiiny.site/"
         className="pdf-iframe"
         aria-label="PDF document"
         scrolling="no"
@@ -27,7 +27,7 @@ const Resume = () => {
       <div className="pdf-container">
       <p className="pdf-text">
         If the PDF is not loading, check it out on{" "}
-        <a href="https://yellow-ilka-16.tiiny.site/" target="_blank">
+        <a href="https://chocolate-fanni-72.tiiny.site/" target="_blank">
           tiiny.host
         </a>
       </p>

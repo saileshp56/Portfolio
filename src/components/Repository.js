@@ -8,19 +8,14 @@ import { Helmet } from "react-helmet";
 const Repository = () => {
   ChartJS.register(ArcElement, Tooltip, Legend);
 
-  const pinnedRepoId = [490452510, 732567631, 701164009]; //just Ids we'll have if statements for
-  const unpinnedRepoId = []; //just Ids we'll have if statements for
+  const pinnedRepoId = [490452510, 732567631, 701164009];
   const [apiFail, setApiFail] = useState(false);
-
-  const pinnedProjects = []; //this should be custom objects we force into the projects array
+  const [showAll, setShowAll] = useState(false);
+  const pinnedProjects = [];
   const [repoArr, setRepoArr] = useState([]);
   const [projects, setProjects] = useState([]);
 
-  const API_key = "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";
-  /*
-    This is a read only api key, but instead of using mine and diminishing my rate limit, please make your own for free (which is what I did)
-
-  */
+  const API_key = "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";
 
   const rotateColors = (colors) => {
     const startIndex = Math.floor(Math.random() * colors.length);
@@ -42,68 +37,80 @@ const Repository = () => {
       Authorization: API_key,
     },
   });
+
   const getRepos = async () => {
     let response = await axiosInstance
-      .get("/users/saileshp56/repos")
+      .get("/users/saileshp56/repos?per_page=100")
       .catch(function (err) {
-        console.log("Error  was ", err)
+        console.log("Error was ", err);
         setApiFail(true);
       });
-
-    let repos = response["data"];
-    for (let i = 0; i < repos.length; ++i) {
-      if (pinnedRepoId.includes(repos[i].id)) {
-        repos[i].pinned = true;
-      } else {
-        repos[i].pinned = false;
-      }
+    if (!response || !response["data"]) {
+      return;
     }
-    // repos += pinnedProjects;
-    repos = repos.sort((a, b) =>
+    let repos = response["data"];
+    let pinnedRepos = [];
+    let unpinnedRepos = [];
+
+    repos.forEach(repo => {
+      if (pinnedRepoId.includes(repo.id)) {
+        repo.pinned = true;
+        pinnedRepos.push(repo);
+      } else {
+        repo.pinned = false;
+        if (!repo.fork) {
+          unpinnedRepos.push(repo);
+        }
+      }
+    });
+
+    // Sort repos by creation date
+    pinnedRepos = pinnedRepos.sort((a, b) =>
       a.created_at < b.created_at ? 1 : b.created_at < a.created_at ? -1 : 0
     );
-    for (let i = 0; i < repos.length; ++i) {
-      if (repos[i].fork && !repos[i].pinned) {
-        repos.splice(i, 1);
-      } else if (repos[i].pinned) {
-        repos.splice(0, 0, repos[i]);
-        repos.splice(i + 1, 1);
-      }
-    }
 
-    setRepoArr(repos);
+    unpinnedRepos = unpinnedRepos.sort((a, b) =>
+      a.created_at < b.created_at ? 1 : b.created_at < a.created_at ? -1 : 0
+    );
+
+    setRepoArr([...pinnedRepos, ...unpinnedRepos]);
+
   };
+
   useEffect(() => {
     getRepos();
   }, []);
 
   useEffect(() => {
-    const promises = repoArr.map(async (repo) => {
-      console.log(repoArr);
-      const languagesObject = await getLanguages(repo["name"]);
-      let titleArr = repo["name"].split("-");
-      for (let i = 0; i < titleArr.length; i++) {
-        titleArr[i] =
-          titleArr[i].charAt(0).toUpperCase() + titleArr[i].slice(1);
-      }
-      titleArr = titleArr.join(" ");
+    console.log(repoArr);
 
-      return {
-        id: repo.id,
-        titleArr,
-        languagesObject,
-        description:
-          // repo.description && repo.description.length > 300
-          //   ? repo.description.slice(0, 297) + "..."
-          //   : repo.description,
-          repo.description,
-        url: repo.html_url,
-        pinned: repo.pinned,
-      };
-    });
-    Promise.all(promises).then((data) => {
+    const fetchLanguages = async () => {
+      const promises = repoArr.map(async (repo) => {
+
+        const languagesObject = await getLanguages(repo["name"]);
+        let titleArr = repo["name"].split("-");
+        for (let i = 0; i < titleArr.length; i++) {
+          titleArr[i] =
+            titleArr[i].charAt(0).toUpperCase() + titleArr[i].slice(1);
+        }
+        titleArr = titleArr.join(" ");
+
+        return {
+          id: repo.id,
+          titleArr,
+          languagesObject,
+          description: repo.description,
+          url: repo.html_url,
+          pinned: repo.pinned,
+        };
+      });
+      const data = await Promise.all(promises);
       setProjects(pinnedProjects.concat([...data]));
-    });
+    };
+
+    if (repoArr.length > 0) {
+      fetchLanguages();
+    }
   }, [repoArr]);
 
   const getLanguages = async (title) => {
@@ -111,126 +118,131 @@ const Repository = () => {
   };
 
   return (
-    <section class="entire-thing" id="repos">
+    <section className="entire-thing" id="repos">
       <Helmet>
-              <html lang="en" />
-              <meta
-                name="description"
-                content="GitHub Repositories, Full-Stack Programming Projects, Computer Science Projects"
-              />
-            </Helmet>
-    <h1 className="repositories-title" >Repositories</h1>
-    <br />
-    <br />
-    <br />
+        <html lang="en" />
+        <meta
+          name="description"
+          content="GitHub Repositories, Full-Stack Programming Projects, Computer Science Projects"
+        />
+      </Helmet>
+      <h1 className="repositories-title">GitHub Repositories</h1>
+      <br />
+      <br />
+      <br />
 
-    <h1 className="mini-title" style={{"paddingLeft": "15px"}}>GitHub Repositories</h1>
+      <div className="main">
+        {apiFail && (
+          <p>
+            Due to high website traffic, I am unable to display the rest of my
+            projects. Please visit{" "}
+            <a
+              href="https://github.com/saileshp56?tab=repositories"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              my GitHub
+            </a>{" "}
+            to see them, and try again in the next hour.
+          </p>
+        )}
 
+        {projects.slice(0, showAll ? projects.length : 9).map((p) => {
+          let sum = 0;
+          let languagesArr = [];
 
-    <div class="main">
-      {apiFail && (
-        <p>
-          Due to high website traffic, I am unable to display the rest of my
-          projects. Please visit{" "}
-          <a
-            href="https://github.com/saileshp56?tab=repositories"
-            target="_blank"
-          >
-            my GitHub
-          </a>{" "}
-          to see them, and try again in the next hour.
-        </p>
-      )}
+          for (const property in p.languagesObject.data) {
+            sum += p.languagesObject.data[property];
+            languagesArr.push({
+              language: property,
+              value: p.languagesObject.data[property],
+            });
+          }
+          const randomizedColors = rotateColors(chartColors);
 
-      {projects.map((p) => {
-        let sum = 0;
-        let languagesArr = [];
+          const data = {
+            labels: languagesArr.map((lang) => lang.language),
+            datasets: [
+              {
+                label: "% of Usage",
+                data: languagesArr.map((lang) => (lang.value / sum) * 100),
+                backgroundColor: randomizedColors, // Use the rotated colors
+                borderColor: randomizedColors.map(color =>
+                  color.replace('0.6', '1')
+                ), // Replace the alpha value for border
+                borderWidth: 1,
+              },
+            ],
+          };
+          const options = {
+            plugins: {
+              maintainAspectRatio: false,
 
-        for (const property in p.languagesObject.data) {
-          sum += p.languagesObject.data[property];
-          languagesArr.push({
-            language: property,
-            value: p.languagesObject.data[property],
-          });
-        }
-        const randomizedColors = rotateColors(chartColors);
-
-        const data = {
-          labels: languagesArr.map((lang) => lang.language),
-          datasets: [
-            {
-              label: "% of Usage",
-              data: languagesArr.map((lang) => (lang.value / sum) * 100),
-              backgroundColor: randomizedColors, // Use the rotated colors
-              borderColor: randomizedColors.map(color => color.replace('0.6', '1')), // Replace the alpha value for border
-              borderWidth: 1,
-            },
-          ],
-        };
-        const options = {
-          plugins: {
-            maintainAspectRatio: false,
-
-            legend: {
-              position: "right",
-              labels: {
-                // This more specific font property overrides the global property
-                color: "white",
-                usePointStyle: true,
-                pointStyle: "circle",
-
-                font: {
-                  size: 10,
+              legend: {
+                position: "right",
+                labels: {
+                  color: "white",
+                  usePointStyle: true,
+                  pointStyle: "circle",
+                  font: {
+                    size: 10,
+                  },
                 },
               },
             },
-          },
-          maintainAspectRatio: true,
-        };
+            maintainAspectRatio: true,
+          };
 
-        return (
-          <div key={p.id} className="card">
-            {/* <Helmet>
-              <html lang="en" />
-              <title>Sailesh Portfolio | Repositories</title>
-              <meta
-                name="description"
-                content="GitHub Repositories, Full-Stack Programming Projects, Computer Science Projects"
-              />
-            </Helmet> */}
-            <div className="project-header-content">
-      <div className="project-header">
-        <div className="project-title">
-          <h1 className="link-and-title">
-          <a
-            href={p.url}
-            target="_blank"
-            onClick={(e) => {
-              p.url === "No Link" ? e.preventDefault() : void 0;
-            }}
-          >
-            {p.titleArr}
-          </a>
-            {p.pinned && (
-              <span role="img" aria-label="pin" style={{ marginLeft: '5px' }}>
-                📌
-              </span>
-            )}
-          </h1>
-          
-        </div>
-      </div>
-              <p className="project-text">{p.description}</p>
+          return (
+            <div key={p.id} className="card-repo">
+              <Helmet>
+                <html lang="en" />
+                <title>Sailesh Portfolio | Repositories</title>
+                <meta
+                  name="description"
+                  content="GitHub Repositories, Full-Stack Programming Projects, Computer Science Projects, Software Projects"
+                />
+              </Helmet>
+              <div className="project-header-content">
+                <div className="project-header">
+                  <div className="project-title">
+                    <h1 className="link-and-title">
+                      <a
+                        href={p.url}
+                        target="_blank"
+                        onClick={(e) => {
+                          p.url === "No Link" ? e.preventDefault() : void 0;
+                        }}
+                      >
+                        {p.titleArr}
+                      </a>
+                      {p.pinned && (
+                        <span
+                          role="img"
+                          aria-label="pin"
+                          style={{ marginLeft: "5px" }}
+                        >
+                          📌
+                        </span>
+                      )}
+                    </h1>
+                  </div>
+                </div>
+                <p className="project-text">{p.description}</p>
+              </div>
+              <div className="graph">
+                <Pie data={data} options={options} />
+              </div>
             </div>
-            <div className="graph">
-              <Pie data={data} options={options}  />
-                  </div> 
-          </div>
-        );
-      })}
-    </div>
+          );
+        })}
+      </div>
+      {projects.length > 9 && (
+        <button className="show-all-button" onClick={() => setShowAll(!showAll)}>
+          {showAll ? "Show Less" : "Show All"}
+        </button>
+      )}
     </section>
-    
   );
 };
 

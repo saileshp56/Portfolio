@@ -135,7 +135,9 @@ const Projects = () => {
           content="Programming Projects, Computer Science Projects"
         />
       </Helmet>
-        <div className="projects" id="projects">
+        <div className="projects" id="projects" >
+
+
     <h1 className="projects-title" >Projects</h1>
 
           <div className="main-projects">
