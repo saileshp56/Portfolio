@@ -3,3 +3,5 @@ git commit -m "whatever message"
 git push origin
 npm run build
 npm run deploy
+
+Then re-add the domain to the github pages
