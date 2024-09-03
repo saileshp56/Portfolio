@@ -26,6 +26,11 @@ const Awards = () => {
               </thead>
               <tbody>
               <tr>
+                  <td>Frontiers by Paradigm x Succint Labs Bounty</td>
+                  <td>$500 USD</td>
+                  <td>08/2024</td>
+                </tr>
+              <tr>
                   <td>ETHDenver 2024 Metamask and RISC0 Bounty &#8212; First Place Winner</td>
                   <td>$8000 USD</td>
                   <td>03/2024</td>

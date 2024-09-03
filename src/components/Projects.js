@@ -52,7 +52,7 @@ const Projects = () => {
             { src: nodeimg, name: "Node.js" },
             { src: figmaimg, name: "Figma" },
           ],
-          live: true,
+          live: false,
           link: "https://www.libinhtml.com/explore",
         },
         {

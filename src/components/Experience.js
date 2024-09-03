@@ -47,7 +47,13 @@ const Experience = () => {
               <p class="work-content">
                 <ul>
                   <li>
-                  • Creating internal tooling for AWS teams using OOP principles with Typescript and Kotlin
+                  •	Creating internal tooling for AWS teams using OOP principles with Typescript and Kotlin
+                  </li>
+                  <li>
+                  •	Wrote Software Design Document and created Prod intern project that will be used by all new AWS services
+                  </li>
+                  <li>
+                  •	Write Unit and Integration Tests for both personal and Pipeline testing in my team’s CI/CD processes
                   </li>
                 </ul>
               </p>

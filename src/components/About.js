@@ -81,13 +81,8 @@ const About = () => {
           <ul id="interests">
             <li>
               <input type="checkbox" disabled></input>
-              &nbsp;&nbsp;&nbsp;&nbsp;I'm a Software Development Engineer Intern at Amazon this summer!
+              &nbsp;&nbsp;&nbsp;&nbsp;AI stuff
 
-            </li>
-            <li>
-            <input type="checkbox" disabled></input>
-            &nbsp;&nbsp;&nbsp;&nbsp;Blockchain Development Tools
-              
             </li>
             <li>
             <input type="checkbox" disabled></input>
@@ -105,6 +100,11 @@ const About = () => {
             <li>
             <input type="checkbox" disabled></input>
             &nbsp;&nbsp;&nbsp;&nbsp;ETHDenver 2024 ZKSnake &#8212; First Place MetaMask & Risc0
+              
+            </li>
+            <li>
+            <input type="checkbox" disabled></input>
+            &nbsp;&nbsp;&nbsp;&nbsp;ZK Vector DB &#8212; Bounty at Frontiers by Paradigm x Succint Labs
               
             </li>
             <li>
